@@ -47,6 +47,7 @@ let seattle = {
       liElement.textContent = `${hours[i]}: ${this.cookiesPerHour[i]} cookies.`;
       seattleList.appendChild(liElement);
     }
+  
 
     let liElement = document.createElement('li');
     liElement.textContent = `Total: ${this.totalCookies} cookies.`;
@@ -113,7 +114,7 @@ console.log(tokyo.cookiesPerHour);
 // Elements
 let tokyoElement = document.getElementById('tokyoH2');
 let h2Element2 = document.createElement('h2');
-h2Element1.textContent = tokyo.location;
+h2Element2.textContent = tokyo.location;
 tokyoElement.appendChild(h2Element2); 
 
  let dubai = {
@@ -165,7 +166,7 @@ console.log(seattle.cookiesPerHour);
 // Elements
 let dubaiElement = document.getElementById('dubaiH2');
 let h2Element3 = document.createElement('h2');
-h2Element1.textContent = dubai.location;
+h2Element3.textContent = dubai.location;
 dubaiElement.appendChild(h2Element3); 
 
 let paris = {
@@ -198,7 +199,7 @@ let paris = {
 
  render: function () {
    this.getCookiesPerHour();
-   let seattleList = document.getElementById('paris');
+   let parisList = document.getElementById('paris');
    for (let i = 0; i < hours.length; i++) {
      let liElement = document.createElement('li');
      liElement.textContent = `${hours[i]}: ${this.cookiesPerHour[i]} cookies.`;
@@ -217,7 +218,7 @@ console.log(seattle.cookiesPerHour);
 // Elements
 let parisElement = document.getElementById('parisH2');
 let h2Element4 = document.createElement('h2');
-h2Element1.textContent = paris.location;
+h2Element4.textContent = paris.location;
 parisElement.appendChild(h2Element4);
 
 let lima = {
@@ -264,10 +265,21 @@ let lima = {
 }
 
 lima.render();
-console.log(seattle.cookiesPerHour);
+console.log(lima.cookiesPerHour);
 
 // Elements
 let limaElement = document.getElementById('limaH2');
 let h2Element5 = document.createElement('h2');
-h2Element1.textContent = lima.location;
+h2Element5.textContent = lima.location;
 limaElement.appendChild(h2Element5); 
+
+
+
+function Store(location, minCust, maxCust, avgSale) {
+  this.location = location;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgSale = avgSale;
+}
+
+let store1 = new Store(seattle, 23, 65, 6.3);
