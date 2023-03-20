@@ -50,3 +50,15 @@ section {
   border-radius: 10px;
   border: 5px solid black;
 }
+
+h2, ul, footer {
+  color: aqua;
+}
+
+fieldset {
+  color: aqua;
+}
+
+.images{
+  transform: scaleX(-1);
+}
